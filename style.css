@@ -1,0 +1,147 @@
+/* UNIVERSAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal; 
+    font-size: normal;
+    font-family: Georgia, serif;
+    box-sizing: border-box;  
+}
+
+/* HEADER STYLE */
+header {
+    padding: 30px;
+    margin: 50px auto;        
+    max-width: 600px;        
+    border: 3px solid #002769;
+    box-shadow: 0px 0px 10px 0px #000000;
+    border-radius: 20px;
+    background-color: #35abf4;
+    text-align: center;      
+}
+
+header > h1 {
+    font-size: x-large;
+    font-weight: bolder;
+    color: #000000;
+}
+
+header > small {
+    font-size: medium;
+    font-weight: lighter;
+}
+
+#formContainer {
+    padding: 30px;
+    margin: 50px auto;        
+    max-width: 600px;         
+    border: 3px solid #001d50;
+    box-shadow: 0px 0px 10px 0px #000000;
+    border-radius: 20px;
+    background-color: #35abf4;
+    text-align: center;      
+}
+
+#studentForm {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    margin: 10px 0;
+}
+
+.input-fields > label {
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.input-fields > input {
+    font-weight: bolder;
+    border: 2px solid #00076b;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    width: 250px;            
+}
+
+/* BUTTON STYLE */
+#studentForm > button {
+    font-weight: bolder;
+    background-color: #cc0000;
+    color: #cd0a0a;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;    
+    border: none;
+}
+
+/* STUDENT LIST STYLE */
+
+#studentList > .list-item > h2
+{
+    font-size: large;
+    font-family: Montserrat, sans-serif;
+    font-weight: bolder;
+    color: #000000;
+    padding: 10px
+}
+
+#studentlist > .list-item > p {
+    font-size: large;
+    font-weight: bolder;
+    color: #000000; 
+    padding: 10px 10px;
+}
+#studentList > .list-item > button 
+{
+    font-weight: normal;
+    background-color: #cc0000;
+    box-shadow: 0px 0px 0px 0px #000000;
+    border-radius: 10px;
+    color: #dcdada;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    margin: 50px;
+
+}
+
+/* for list container */
+
+#studentList {
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px
+}
+
+/*responsive design for smaller screens */
+
+/* mobile view */
+
+@media (width <= 320px) {
+    #studentList > .list-item {
+        grid-column: span 12;
+    }
+}
+
+/* tablet view */
+
+@media (width >320) and (width <= 600px) {
+    #studentList > .list-item {
+        grid-column: span 3;
+    }
+}
+ /* desktop view */
+
+@media (width >= 1000px) {
+    #studentList > .list-item {
+        grid-column: span 2;
+    }
+}
